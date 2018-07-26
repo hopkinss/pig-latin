@@ -1,0 +1,21 @@
+{% extends 'base.jinja2' %}
+
+{% block subtitle %}English to to Pig Latin result{% endblock subtitle %}
+
+{% block content %}
+
+    <h4><em>Original path:</em>{{ result.path }}</h4>
+    <table border="1">
+        <tr><td style="font-weight: bold;">English</td><td>{{ result.ohtml}}</td></tr>
+        <tr style="background-color: aliceblue"><td style="font-weight: bold;">Pig latin</td><td>{{ result.phtml }}</td></tr>
+    </table>
+
+    <form method="POST" name="frmRetry">
+        <div style="width: fit-content;margin: 15px;">
+            <div align="center" style="border-top: 1px solid gainsboro;margin: 5px;padding: 5px;">
+                 <input type="submit"  value="Try Again">
+            </div>
+        </div>
+    </form>
+
+{% endblock content %}
